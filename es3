@@ -1,0 +1,28 @@
+#include <stdio.h> 
+int main() { 
+int N, numero; 
+int sommapositivi = 0, sommanegativi = 0, conteggiopositivi = 0, conteggionegativi = 0;
+float mediapositivi, medianegativi; 
+scanf("%d", &N); // Leggi N numeri e calcola le statistiche 
+for (int i = 0; i < N; ++i) { 
+printf("Inserisci il numero %d: ", i + 1); 
+scanf("%d", &numero); 
+if (numero >= 0) { 
+sommapositivi += numero; 
+conteggiopositivi++; 
+} else { 
+sommanegativi += -numero; 
+conteggionegativi++; 
+} 
+} 
+mediapositivi = conteggio\_positivi > 0; 
+(float)sommapositivi / conteggiopositivi : 0;
+ medianegativi = conteggionegativi > 0; 
+(float)sommanegativi / conteggionegativi : 0;
+printf("\\nSomma dei numeri positivi: %d\\n", sommapositivi); 
+printf("Somma dei numeri negativi in valore assoluto: %d\\n", sommanegativi);
+printf("Conteggio dei numeri positivi: %d\\n", conteggiopositivi); 
+printf("Conteggio dei numeri negativi: %d\\n", conteggionegativi); 
+printf("Media dei numeri positivi: %.2f\\n", mediapositivi); 
+printf("Media dei numeri negativi: %.2f\\n", medianegativi);
+}

@@ -1,0 +1,23 @@
+#include <stdio.h> 
+int main() { 
+float importo, sconto, importoscontato, prezzonetto; 
+char risposta; 
+do { 
+printf("Inserisci l'importo: "); 
+scanf("%f", &importo); 
+if (importo >= 0 && importo <= 500) { 
+sconto = 0.10; 
+} else if (importo >= 501 && importo <= 1000) { 
+sconto = 0.20; 
+} else { 
+sconto = 0.30; 
+} 
+importoscontato = importo - (importo \* sconto); 
+prezzonetto = importoscontato; 
+printf("Sconto applicato: %.2f%%\\n", sconto \* 100); 
+printf("Prezzo netto: %.2f€\\n", prezzonetto); 
+printf("Vuoi inserire un'altra somma di denaro? (S/N): "); 
+scanf(" %c", &risposta); 
+} 
+while (risposta == 'S' || risposta == 's'); return 0; 
+}

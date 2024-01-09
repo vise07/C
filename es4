@@ -10,7 +10,6 @@ int isPrimo(int num) {
     }
     return 1;
 }
-
 int main() {
     int N;
     printf("Inserisci un numero intero positivo N: ");

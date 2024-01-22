@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+int N,numero, massimo, minimo;
+printf("Inserisci il numero di elementi: ");
+scanf("%d", &N);
+if (N <= 0) {
+printf("Il numero di elementi deve essere positivo.\n");
+return 1; // Termina il programma con errore
+}
+// Chiedi all'utente di inserire il primo numero
+printf("Inserisci il primo numero: ");
+scanf("%d", &numero);
+// Inizializza massimo e minimo con il primo numero inserito
+massimo = minimo = numero;
+// Loop per inserire gli altri numeri e aggiornare massimo e minimo
+for (int i = 1; i < N; i++) {
+printf("Inserisci il prossimo numero: ");
+scanf("%d", &numero);
+// Aggiorno massimo e minimo se necessario
+if (numero > massimo) {
+massimo = numero;
+}
+if (numero < minimo) {
+minimo = numero;
+}
+}
+// Stampo il risultato
+printf("Il massimo è: %d\n", massimo);
+printf("Il minimo è: %d\n", minimo);
+return 0; // Termina il programma con successo
+}

@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+
+int main(){
+
+
+    int panino,pastina,soldi,giorni,scelta,digiuno;
+
+    
+
+    printf("Quanti soldi ha Mario? \n");
+
+    scanf("%d",&soldi);
+
+
+    while(soldi>0.5){
+
+        giorni=giorni+1;
+
+        printf("Giorno %d \n",giorni);
+
+        printf("Salve Mario, 1.comprare il panino, 2.la pastina \n");
+
+        scanf("%d",&scelta);
+
+       
+
+        if(scelta==1){
+
+           soldi=soldi-1.5;
+
+           printf("Hai preso il panino \n");
+
+           panino=panino+1;
+
+        }else if(scelta==2){
+
+           soldi=soldi-1;
+
+           printf("Hai preso la pastina \n");
+
+           pastina=pastina+1;
+
+        }else{
+
+           printf("Oggi hai fatto dieta");
+
+           digiuno= digiuno+1;
+
+        }
+
+       
+
+    }
+
+    printf("Sei durato %d giorni\n",giorni);
+
+    printf(" %d panini\n",panino);
+
+    printf(" %d pastine\n",pastina);
+
+    printf("%d giorni digiuno",digiuno);
+
+}
